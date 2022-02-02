@@ -1,0 +1,77 @@
+:root {
+  /* Dracula color pallete */
+  --background: #282a36;
+  --current-line: #44475a;
+  --foreground: #f8f8f2;
+  --comment: #6272a4;
+  --cyan: #8be9fd;
+  --green: #50fa7b;
+  --orange: #ffb86c;
+  --pink: #ff79c6;
+  --purple: #bd93f9;
+  --red: #ff5555;
+  --yellow: #f1fa8c;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+
+body {
+  background: var(--background);
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+section {
+  text-align: center;
+}
+
+section > h1 {
+  font-size: 10vw;
+  text-shadow: 0 0 6vw var(--pink);
+  font-weight: 100;
+  padding: 1vw 0;
+  color: var(--background);
+}
+
+#main-container {
+  background: var(--current-line);
+  height: 80vw;
+  width: 80vw;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+}
+
+#main-container > div {
+  border: 1.2vw solid var(--background);
+  box-shadow: inset 0 0 15px 0px var(--pink);
+  color: var(--background);
+  font-weight: 900;
+  text-shadow: 0 0 15px var(--pink);
+  font-size: 20vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#main-container > div:hover {
+  background: var(--pink);
+  box-shadow: inset 0 0 15px 0px var(--background);
+  text-shadow: 0 0 15px var(--background);
+}
+
+.lights-on {
+  text-shadow: 0 0 2vw var(--pink);
+}
+
+.lights-off {
+  text-shadow: 0 0 2vw black;
+}
