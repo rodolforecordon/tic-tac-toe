@@ -22,6 +22,43 @@
       <div id="sq-9"></div>
     </div>
   </section>
+  <dialog id="main-dialog" open>
+    <form>
+      <div>
+        <label>Player 1</label><br>
+        <input type="text" id="player1-name" placeholder="Name">
+        <select name="player1-color" id="player1-color">
+          <option value="pink" style="color: var(--pink)">Pink</option>
+          <option value="cyan" style="color: var(--cyan)">Cyan</option>
+          <option value="green" style="color: var(--green)">Green</option>
+          <option value="orange" style="color: var(--orange)">Orange</option>
+          <option value="purple" style="color: var(--purple)">Purple</option>
+        </select>
+        <select name="player1-marker" id="player1-marker">
+          <option value="X">X</option>
+          <option value="O">O</option>
+        </select>
+      </div>
+      <div>
+        <label>Player 2</label><br>
+        <input type="text" id="player2-name" placeholder="Name">
+        <select name="player2-color" id="player2-color">
+          <option value="pink" style="color: var(--pink)">Pink</option>
+          <option value="cyan" style="color: var(--cyan)">Cyan</option>
+          <option value="green" style="color: var(--green)">Green</option>
+          <option value="orange" style="color: var(--orange)">Orange</option>
+          <option value="purple" style="color: var(--purple)">Purple</option>
+        </select>
+        <select name="player2-marker" id="player2-marker">
+          <option value="O">O</option>
+          <option value="X">X</option>
+        </select>
+      </div>
+    </form>
+    <menu>
+      <button id="confirm-btn" value="default">START</button>
+    </menu>
+  </dialog>
   <script src="./src/js/index.js"></script>
   <script src="./src/js/blinkingTitle.js"></script>
 </body>

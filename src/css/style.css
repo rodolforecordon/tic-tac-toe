@@ -17,6 +17,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  color: var(--pink);
   font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
 }
 
@@ -34,29 +35,29 @@ section {
 }
 
 section > h1 {
-  font-size: 10vw;
-  text-shadow: 0 0 6vw var(--pink);
-  font-weight: 100;
-  padding: 1vw 0;
+  font-size: 5em;
+  text-shadow: 0 0 2rem var(--pink);
+  font-weight: 400;
+  padding: 1rem 0;
   color: var(--background);
 }
 
 #main-container {
   background: var(--current-line);
-  height: 80vw;
-  width: 80vw;
+  height: 50em;
+  width: 50em;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
 }
 
 #main-container > div {
-  border: 1.2vw solid var(--background);
-  box-shadow: inset 0 0 15px 0px var(--pink);
+  border: .3rem solid var(--background);
+  box-shadow: inset 0 0 3rem 0px var(--pink);
   color: var(--background);
   font-weight: 900;
-  text-shadow: 0 0 15px var(--pink);
-  font-size: 20vw;
+  text-shadow: 0 0 3rem var(--pink);
+  font-size: 13rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -64,14 +65,99 @@ section > h1 {
 
 #main-container > div:hover {
   background: var(--pink);
-  box-shadow: inset 0 0 15px 0px var(--background);
-  text-shadow: 0 0 15px var(--background);
+  box-shadow: inset 0 0 3rem 0px var(--background);
+  text-shadow: 0 0 3rem var(--background);
 }
 
 .lights-on {
-  text-shadow: 0 0 2vw var(--pink);
+  text-shadow: 0 0 4rem var(--pink);
 }
 
 .lights-off {
-  text-shadow: 0 0 2vw black;
+  text-shadow: 0 0 2rem black;
+}
+
+dialog {
+  background: var(--background);
+  margin: auto auto;
+  width: 80vw;
+  height: 80vh;
+  text-align: center;
+  box-shadow: inset 0 0 2rem 0px var(--pink);
+  padding: 3em;
+}
+dialog > menu {
+  margin: 1em;
+}
+dialog > menu > button {
+  font-size: 2em;
+  padding: .5em 1.5em;
+}
+
+button {
+  all: unset;
+  display: revert;
+  padding: 10px;
+  border: 3px solid var(--pink);
+  background: var(--current-line);
+  border-radius: 10px;
+  box-shadow: inset 0 0 .5rem 0px var(--pink);
+  color: var(--pink);
+  font-weight: 800;
+}
+
+button:hover {
+  background: var(--pink);
+  color: var(--background);
+  font-weight: bolder;
+}
+
+button:active {
+  background: var(--background);
+  color: var(--pink);
+}
+
+form {
+  font-size: 2em;
+  display: flex;
+}
+form > div {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+form > div > input {
+  all: unset;
+  display: revert;
+  background: var(--pink);
+  padding: .2em;
+  margin: .5em;
+  border-radius: 5px;
+  color: var(--background);
+}
+
+form > div > select {
+  all: unset;
+  display: revert;
+  background: var(--pink);
+  padding: .2em;
+  margin: .5em;
+  border-radius: 5px;
+  color: var(--background);
+}
+
+form > div > select > option {
+  all: unset;
+  display: revert;
+  background: var(--background);
+}
+
+#player1-marker > option,
+#player2-marker > option {
+  color: var(--pink);
+}
+
+#confirm-btn {
+  margin-top: 17rem;
 }
