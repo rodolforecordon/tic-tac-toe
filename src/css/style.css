@@ -64,9 +64,10 @@ section > h1 {
 }
 
 #main-container > div:hover {
-  background: var(--pink);
+  background: var(--foreground);
   box-shadow: inset 0 0 3rem 0px var(--background);
   text-shadow: 0 0 3rem var(--background);
+  cursor: pointer;
 }
 
 .lights-on {
