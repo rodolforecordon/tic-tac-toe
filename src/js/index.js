@@ -13,21 +13,27 @@ const gameStart = () => {
     const name = () => document.querySelector(`#player${playerNum}-name`).value;
     const color = () => document.querySelector(`#player${playerNum}-color`).value;
     const marker = () => document.querySelector(`#player${playerNum}-marker`).value;
-    const markedCells = [];
+    let markedCells = [];
     const setMarkedCells = cellId => markedCells.push(cellId)
     const getMarkedCells = () => markedCells;
+    const resetMarkedCells = () => markedCells = [];
 
-    return { name, color, marker, setMarkedCells, getMarkedCells };
+    return { name, color, marker, setMarkedCells, getMarkedCells, resetMarkedCells };
   }
   
   const player1 = player('1');
   const player2 = player('2');
+
+  // new game reset
+  player1.resetMarkedCells();
+  player2.resetMarkedCells();
 
   let currentTurn = player1;
   changeTurn('#main-container', 'div', player1.color());
 
   // game play
   const mainContainer = document.querySelector('#main-container');
+  mainContainer.childNodes.forEach(div => div.innerText = '');
   
   mainContainer.addEventListener('click', e => {
     const elId = e.target.id;
@@ -83,7 +89,12 @@ const gameStart = () => {
   }
 
   function win(player) {
-    alert(`${player.name()} is the winner!!!`)
+    const el = document.createElement('h1');
+    el.innerHTML = `${player.name()} is the winner!!!`;
+    el.className = 'lights-on';
+    console.log(mainDialog.childNodes);
+    mainDialog.replaceChild(el, mainDialog.childNodes[0]);
+    mainDialog.showModal();
   }
 
   function draw() {
